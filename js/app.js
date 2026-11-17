@@ -303,7 +303,7 @@
       <li>${icon("i-wa")}<a href="${generic}" target="_blank" rel="noopener">WhatsApp de ventas</a></li>
       ${tels}
       <li>${icon("i-mail")}<a href="mailto:${esc(CFG.email)}">${esc(CFG.email)}</a></li>
-      <li>${icon("i-pin")}<a href="${esc(CFG.mapsUrl)}" target="_blank" rel="noopener">${esc(CFG.direccion)}</a></li>
+      <li>${icon("i-pin")}<span>Entregas en ${esc(CFG.zona)}</span></li>
       ${CFG.horario ? `<li>${icon("i-clock")}<span>${esc(CFG.horario)}</span></li>` : ""}`;
     syncPrefsUI();
   }
@@ -485,7 +485,8 @@
     const who = $("#who");
     const mode = whoMode();
     who.dataset.mode = mode;
-    const c = Object.assign({ nombre: "", localidad: "", entrega: "Retiro en el local", perfil: "", comentarios: "" }, savedCustomer() || {}, customerDraft || {});
+    const c = Object.assign({ nombre: "", localidad: "", entrega: "Envío a domicilio u obra (a cotizar)", perfil: "", comentarios: "" }, savedCustomer() || {}, customerDraft || {});
+    if (c.entrega !== "Retiro a coordinar") c.entrega = "Envío a domicilio u obra (a cotizar)"; // datos guardados con las opciones viejas
     if (mode === "summary") {
       who.innerHTML = `
         <h3>Tus datos</h3>
@@ -495,7 +496,7 @@
           <button class="link-btn" type="button" id="who-edit">${icon("i-edit")} Cambiar</button>
         </div>
         <div class="field" style="margin-top:10px"><label for="f-comentarios">Comentario para este pedido (opcional)</label>
-          <textarea id="f-comentarios" name="comentarios" rows="2" placeholder="Ej: necesito factura A, retiro el jueves…">${esc(c.comentarios)}</textarea></div>`;
+          <textarea id="f-comentarios" name="comentarios" rows="2" placeholder="Ej: necesito factura A, lo preciso para el jueves…">${esc(c.comentarios)}</textarea></div>`;
       return;
     }
     const chip = (name, val, label, checked) =>
@@ -508,14 +509,14 @@
           <div class="field"><label for="f-localidad">Localidad</label><input id="f-localidad" name="localidad" required autocomplete="address-level2" placeholder="Ej: Wilde, Quilmes" value="${esc(c.localidad)}"></div>
         </div>
         <fieldset class="chips"><legend>Entrega</legend>
-          ${chip("entrega", "Retiro en el local", "Retiro en el local", c.entrega !== "Envío a domicilio (cotizar)")}
-          ${chip("entrega", "Envío a domicilio (cotizar)", "Envío (a cotizar)", c.entrega === "Envío a domicilio (cotizar)")}
+          ${chip("entrega", "Envío a domicilio u obra (a cotizar)", "Envío (a cotizar)", c.entrega === "Envío a domicilio u obra (a cotizar)")}
+          ${chip("entrega", "Retiro a coordinar", "Retiro a coordinar", c.entrega === "Retiro a coordinar")}
         </fieldset>
         <fieldset class="chips"><legend>Sos… <span class="muted">(opcional)</span></legend>
           ${["Particular", "Instalador / gasista", "Empresa / constructora"].map((x) => chip("perfil", x, x, c.perfil === x)).join("")}
         </fieldset>
         <div class="field"><label for="f-comentarios">Comentario (opcional)</label>
-          <textarea id="f-comentarios" name="comentarios" rows="2" placeholder="Ej: necesito factura A, retiro el jueves…">${esc(c.comentarios)}</textarea></div>
+          <textarea id="f-comentarios" name="comentarios" rows="2" placeholder="Ej: necesito factura A, lo preciso para el jueves…">${esc(c.comentarios)}</textarea></div>
       </form>`;
   }
 

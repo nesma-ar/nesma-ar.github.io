@@ -8,8 +8,8 @@ window.NESMA_CONFIG = {
 
   telefonos: ["011-5826-3049", "011-3574-7780"],
   email: "nesma.ventas@gmail.com",
-  direccion: "Almirante Cordero 5865, Wilde, Avellaneda, Buenos Aires",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Almirante+Cordero+5865,+Wilde,+Buenos+Aires",
+  // No hay local a la calle: se muestra la zona que se atiende, no una dirección.
+  zona: "Wilde, Avellaneda y alrededores",
   // Horario de atención, ej: "Lunes a viernes de 9 a 18 h". null = no se muestra.
   horario: null,
 
