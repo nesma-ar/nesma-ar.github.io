@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NesMa · Calderas, radiadores y calefacción</title>
+  <meta name="description" content="NesMa: calderas, calefones, radiadores, piso radiante y accesorios Caldaia. Armá tu pedido online y envialo por WhatsApp. Wilde, Avellaneda.">
+  <meta name="theme-color" content="#173a66">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NesMa · Calderas, radiadores y calefacción">
+  <meta property="og:description" content="Catálogo completo con precios. Armá tu pedido y envialo por WhatsApp.">
+  <meta property="og:url" content="https://nesma-ar.github.io/">
+  <meta property="og:site_name" content="NesMa">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:image" content="https://nesma-ar.github.io/img/og-nesma.jpg">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="608">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://nesma-ar.github.io/">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HardwareStore", "name": "NesMa", "description": "Venta de calderas, calefones, radiadores, piso radiante, sanitarios y herramientas. Pedidos por WhatsApp.", "url": "https://nesma-ar.github.io/", "logo": "https://nesma-ar.github.io/img/logo.png", "image": "https://nesma-ar.github.io/img/og-nesma.jpg", "telephone": "+54 9 11 5826-3049", "email": "nesma.ventas@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "Almirante Cordero 5865", "addressLocality": "Wilde", "addressRegion": "Buenos Aires", "postalCode": "1875", "addressCountry": "AR"}, "areaServed": ["Wilde", "Avellaneda", "Sarandí", "Dock Sud", "Bernal", "Quilmes", "Gran Buenos Aires"], "priceRange": "$$"}</script>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=202611171200">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__list">Lista <strong id="lista-mes"></strong><span class="hide-sm"> · precios en dólares</span></span>
+      <div class="iva-switch" role="group" aria-label="Mostrar precios">
+        <button type="button" data-iva="0" aria-pressed="true">Sin IVA</button>
+        <button type="button" data-iva="1" aria-pressed="false">Con IVA</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a href="#/" class="brand" aria-label="NesMa, inicio">
+        <img src="img/logo.webp" alt="NesMa — Calderas, sanitarios, herramientas" width="409" height="156">
+      </a>
+      <form class="search" role="search" id="search-form" autocomplete="off">
+        <svg class="ic search__ic" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="search" type="search" placeholder="Buscá por producto, medida o código" aria-label="Buscar productos"
+               role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list" enterkeyhint="search">
+        <kbd class="search__kbd hide-sm" aria-hidden="true">/</kbd>
+        <div class="suggest" id="suggest" role="listbox" hidden></div>
+      </form>
+      <a class="cart-btn" href="#/pedido" id="cart-open" aria-label="Ver mi pedido">
+        <svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg>
+        <span class="cart-btn__label">Mi pedido</span>
+        <span class="badge" id="cart-count" hidden>0</span>
+      </a>
+    </div>
+    <nav class="catnav" aria-label="Categorías">
+      <div class="wrap catnav__in" id="catnav"></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- INICIO -->
+    <section id="view-home" class="view">
+      <div class="hero">
+        <div class="wrap hero__in">
+          <div class="hero__txt">
+            <p class="eyebrow">Distribuidor Caldaia · Wilde, Avellaneda</p>
+            <h1>Calefacción y agua caliente, <span class="nowrap">sin vueltas.</span></h1>
+            <p class="lead">Calderas, radiadores, piso radiante y todos los accesorios. Armá tu pedido en minutos y mandalo por WhatsApp: te confirmamos stock y total.</p>
+            <div class="hero__cta">
+              <a href="#/catalogo" class="btn btn--primary btn--lg">Ver catálogo</a>
+              <a href="#/catalogo" data-set-vista="lista" class="btn btn--ghost btn--lg">
+                <svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Lista rápida
+              </a>
+            </div>
+            <p class="hero__note">¿Sos instalador? La <strong>lista rápida</strong> muestra los 226 modelos con código y precio: cargás cantidades sin entrar a cada producto.</p>
+          </div>
+          <div class="showcase" id="showcase"></div>
+        </div>
+      </div>
+
+      <div class="wrap perks">
+        <div class="perk"><svg class="ic"><use href="#i-shield"/></svg><div><strong>Marcas de primera</strong><span>Caldaia, Caleffi, Grundfos, Emmeti</span></div></div>
+        <div class="perk"><svg class="ic"><use href="#i-tool"/></svg><div><strong>Asesoramiento técnico</strong><span>Te ayudamos a elegir el equipo</span></div></div>
+        <div class="perk"><svg class="ic"><use href="#i-wa"/></svg><div><strong>Pedido por WhatsApp</strong><span>Sin registro ni pagos online</span></div></div>
+        <div class="perk"><svg class="ic"><use href="#i-pin"/></svg><div><strong>Retiro en Wilde</strong><span>Consultá envíos a tu zona</span></div></div>
+      </div>
+
+      <section class="wrap block">
+        <div class="block__head">
+          <h2>¿Qué estás buscando?</h2>
+          <a href="#/catalogo" class="link">Todo el catálogo →</a>
+        </div>
+        <div class="cats" id="home-cats"></div>
+      </section>
+
+      <section class="wrap block">
+        <div class="block__head">
+          <h2>Más buscados</h2>
+        </div>
+        <div class="grid" id="home-featured"></div>
+      </section>
+
+      <section class="wrap block">
+        <div class="pro-band">
+          <div>
+            <h2>Pedido rápido para instaladores</h2>
+            <p>Todos los modelos en una tabla, con código y precio. Buscá “te 25” o “06-046”, cargá cantidades y enviá. Sin entrar a cada ficha.</p>
+          </div>
+          <a href="#/catalogo" data-set-vista="lista" class="btn btn--light btn--lg">Abrir lista rápida →</a>
+        </div>
+      </section>
+
+      <section class="wrap block how">
+        <h2>¿Cómo hago mi pedido?</h2>
+        <ol class="steps">
+          <li><span>1</span><strong>Elegí los productos</strong><p>Por categoría, buscando por nombre o código, o desde la lista rápida.</p></li>
+          <li><span>2</span><strong>Revisá tu pedido</strong><p>Ves el detalle, el subtotal y el total estimado con IVA.</p></li>
+          <li><span>3</span><strong>Envialo por WhatsApp</strong><p>Se abre WhatsApp con el pedido escrito. Te confirmamos stock, total y entrega.</p></li>
+        </ol>
+      </section>
+
+      <section class="wrap block faq">
+        <h2>Preguntas frecuentes</h2>
+        <details><summary>¿Los precios incluyen IVA?</summary><p>La lista está en dólares y sin IVA. Arriba podés cambiar a “Con IVA” para ver los precios con el 21 % incluido. En el pedido siempre ves los dos.</p></details>
+        <details><summary>¿El pedido por la web es una compra?</summary><p>No: es una solicitud. Al recibirla te confirmamos disponibilidad, total final, formas de pago y entrega antes de cerrar la venta.</p></details>
+        <details><summary>¿No sabés qué caldera o radiador necesitás?</summary><p>Escribinos por WhatsApp con los ambientes y metros a calefaccionar y te recomendamos el equipo y los accesorios para la instalación.</p></details>
+        <details><summary>¿Los radiadores se venden por elemento?</summary><p>Sí. El precio de los radiadores de aluminio es por elemento: elegí cuántos elementos lleva cada equipo.</p></details>
+        <details><summary>¿El caño PEX se vende por metro?</summary><p>El precio es por metro pero se vende por rollo completo (200 m, 50 m o tira de 4 m según la medida). Al cargarlo, la cantidad avanza de a un rollo.</p></details>
+      </section>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="view-catalog" class="view" hidden>
+      <div class="wrap">
+        <div class="crumbs" id="crumbs"></div>
+        <div class="cat-head">
+          <div>
+            <h1 id="catalog-title">Catálogo</h1>
+            <p id="catalog-desc" class="muted"></p>
+          </div>
+        </div>
+        <div class="toolbar">
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+          <div class="toolbar__ctrls">
+            <label class="select">
+              <span class="sr">Marca</span>
+              <select id="filter-brand"><option value="">Todas las marcas</option></select>
+            </label>
+            <label class="select">
+              <span class="sr">Ordenar</span>
+              <select id="sort">
+                <option value="relevancia">Relevancia</option>
+                <option value="precio-asc">Menor precio</option>
+                <option value="precio-desc">Mayor precio</option>
+                <option value="nombre">Nombre A-Z</option>
+              </select>
+            </label>
+            <div class="seg" role="group" aria-label="Vista">
+              <button type="button" data-vista="grilla" aria-pressed="true" title="Vista de tarjetas"><svg class="ic"><use href="#i-grid"/></svg><span class="hide-sm">Tarjetas</span></button>
+              <button type="button" data-vista="lista" aria-pressed="false" title="Lista rápida con todos los modelos"><svg class="ic"><use href="#i-list"/></svg><span>Lista rápida</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="grid" id="catalog-grid"></div>
+        <div class="plist" id="catalog-list" hidden></div>
+        <div class="empty" id="catalog-empty" hidden>
+          <p><strong>No encontramos productos con esa búsqueda.</strong></p>
+          <p class="muted">Probá con otra palabra o una medida (ej. “te 25”, “coaxial”), o consultanos.</p>
+          <div class="empty__actions">
+            <a href="#/catalogo" class="btn btn--ghost">Ver todo el catálogo</a>
+            <a href="#" data-wa-search class="btn btn--wa">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="wrap footer__in">
+      <div>
+        <img src="img/logo.webp" alt="NesMa" class="footer__logo" width="409" height="156">
+        <p class="muted">Calderas · Sanitarios · Herramientas.<br>Venta de productos y servicios.</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul class="contact" id="contact-list"></ul>
+      </div>
+      <div>
+        <h3>Importante</h3>
+        <p class="muted small">Precios en dólares estadounidenses, sin IVA, según lista <span class="js-lista"></span>. Sujetos a cambio sin previo aviso. Imágenes ilustrativas. Consultá disponibilidad antes de confirmar tu compra.</p>
+      </div>
+    </div>
+    <div class="wrap footer__legal small muted">© <span id="year"></span> NesMa · Wilde, Avellaneda, Buenos Aires</div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a class="fab" data-wa href="#" aria-label="Consultar por WhatsApp">
+    <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Barra de pedido (mobile) -->
+  <a class="cartbar" id="cartbar" href="#/pedido" hidden>
+    <span class="cartbar__info"><strong id="cartbar-count">0</strong><span id="cartbar-total"></span></span>
+    <span class="cartbar__go">Ver pedido <svg class="ic"><use href="#i-arrow"/></svg></span>
+  </a>
+
+  <!-- Detalle de producto -->
+  <div class="modal" id="product-modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+      <div class="pd" id="pd"></div>
+    </div>
+  </div>
+
+  <!-- Pedido -->
+  <div class="drawer" id="cart-drawer" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="drawer__head">
+        <h2 id="cart-title">Mi pedido</h2>
+        <button class="icon-btn" data-close aria-label="Cerrar"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="drawer__body" id="cart-body">
+        <div id="cart-empty" class="cart-empty">
+          <svg class="ic ic--xl"><use href="#i-cart"/></svg>
+          <p><strong>Tu pedido está vacío</strong></p>
+          <p class="muted">Agregá productos desde el catálogo o la lista rápida.</p>
+          <div class="cart-empty__actions">
+            <a href="#/catalogo" class="btn btn--primary" data-close-nav>Ver catálogo</a>
+            <a href="#/catalogo" class="btn btn--ghost" data-set-vista="lista" data-close-nav>Lista rápida</a>
+          </div>
+        </div>
+        <div id="cart-sent" class="cart-sent" hidden>
+          <span class="cart-sent__ic"><svg class="ic"><use href="#i-check"/></svg></span>
+          <p><strong>¡Listo! Abrimos WhatsApp con tu pedido.</strong></p>
+          <p class="muted">Sólo falta tocar <b>enviar</b> en WhatsApp. ¿No se abrió?</p>
+          <div class="cart-sent__actions">
+            <a class="btn btn--wa" id="sent-reopen" target="_blank" rel="noopener" href="#"><svg class="ic"><use href="#i-wa"/></svg> Abrir WhatsApp</a>
+            <button class="btn btn--ghost" type="button" data-copy-order><svg class="ic"><use href="#i-copy"/></svg> Copiar pedido</button>
+          </div>
+          <hr>
+          <p class="muted small">¿Ya lo enviaste?</p>
+          <div class="cart-sent__actions">
+            <button class="btn btn--primary" type="button" id="sent-new">Empezar un pedido nuevo</button>
+            <button class="link-btn" type="button" id="sent-back">Volver a mi pedido</button>
+          </div>
+        </div>
+        <div id="cart-filled">
+          <ul class="cart-list" id="cart-list"></ul>
+          <div class="cart-totals" id="cart-totals"></div>
+          <section class="who" id="who"></section>
+        </div>
+      </div>
+      <div class="drawer__foot" id="cart-foot">
+        <p class="form-error" id="checkout-error" hidden>Completá tu nombre y localidad para enviar el pedido.</p>
+        <button class="btn btn--wa btn--block btn--lg" id="send-order">
+          <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span>Enviar por WhatsApp</span><span class="send__total" id="send-total"></span>
+        </button>
+        <div class="drawer__foot-links">
+          <button class="link-btn" type="button" data-copy-order><svg class="ic"><use href="#i-copy"/></svg> Copiar pedido</button>
+          <button class="link-btn" type="button" id="cart-clear"><svg class="ic"><use href="#i-trash"/></svg> Vaciar</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- Íconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="19" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="4.5" cy="6" r="1.3" fill="currentColor"/><circle cx="4.5" cy="12" r="1.3" fill="currentColor"/><circle cx="4.5" cy="18" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="4" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="13" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.6 17.2a1.4 1.4 0 0 0 0 2l1.2 1.2a1.4 1.4 0 0 0 2 0l5.7-5.7a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.5-.5-2.3 2.6-2.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <!-- categorías -->
+    <symbol id="c-flame" viewBox="0 0 24 24"><path d="M12 3s5 4.5 5 9.5A5 5 0 0 1 7 12.5c0-2 1-3.5 1-3.5s.5 2 2 2.5C10 8 12 3 12 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 21v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="c-box" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 7h6M9 10h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="c-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="c-grid" viewBox="0 0 24 24"><path d="M5 4v16M9.7 4v16M14.3 4v16M19 4v16M3 7h18M3 17h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="c-layers" viewBox="0 0 24 24"><path d="M4 6c4 0 4 4 8 4s4-4 8-4M4 12c4 0 4 4 8 4s4-4 8-4M4 18c4 0 4 0 8 0s4 0 8 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="c-gauge" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m12 13 3.5-3.5M9 3h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="c-wave" viewBox="0 0 24 24"><path d="M3 9c2 0 2-1.5 4.5-1.5S10 9 12 9s2-1.5 4.5-1.5S19 9 21 9M3 14c2 0 2-1.5 4.5-1.5S10 14 12 14s2-1.5 4.5-1.5S19 14 21 14M3 19c2 0 2-1.5 4.5-1.5S10 19 12 19s2-1.5 4.5-1.5S19 19 21 19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="c-plug" viewBox="0 0 24 24"><path d="M4 12h5a3 3 0 0 1 3 3v6M4 12V8M20 6h-6a3 3 0 0 0-3 3v1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="4" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="20" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="c-wrench" viewBox="0 0 24 24"><path d="M7 4v4h4V4M9 8v12M15 4v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V4M17 12v8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <script src="data/config.js?v=202611171200"></script>
+  <script src="data/productos.js?v=202611171200"></script>
+  <script src="js/app.js?v=202611171200"></script>
+</body>
+</html>
